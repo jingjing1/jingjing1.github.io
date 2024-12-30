@@ -346,7 +346,7 @@
 		    <div class="projects" style="margin-left: 1em; margin-right: 1em">
 
 			<script>
-			    const imagesBox1 = [".files/Christmas2024/3.jpg", ".files/Christmas2024/3.jpg", ".files/Christmas2024/3.jpg"]; 
+			    const imagesBox1 = ["./files/Christmas2024/3.jpg", "./files/Christmas2024/3.jpg", "./files/Christmas2024/3.jpg"]; 
 			    let currentIndexBox1 = 0;
 			    function changeImage(boxId, direction) {
 			        let images;
@@ -371,14 +371,14 @@
 
 			<!-- box 1 -->
 			<div class="projects" style="margin-left: 1em; margin-right: 1em">
-				<img  src=".files/team_christmas2024_3.jpg" 
+				<img  src="./files/team_christmas2024_3.jpg" 
 					     alt="Team Christmas2024">
 			    <div class="boxed" style="border: 1px solid #DDDDDD; padding: 10px; width: auto; height: auto; overflow: hidden;">
 			
 				    <div class="gallery" 
 					style="float: left; margin-left: 10px; margin-right: 10px; border: 1px solid #ccc; width: 260px; height: 260px;">
 					<button class="prev" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 5px; cursor: pointer;" onclick="changeImage(1, -1)">&#10094;</button>
-					<img id="gallery-image-1" src=".files/Christmas2024/3.jpg" 
+					<img id="gallery-image-1" src="./files/Christmas2024/3.jpg" 
 					     alt="Team Christmas2024" style="width: 100%; height: 100%; object-fit: cover;">
 					<button class="next" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 5px; cursor: pointer;" onclick="changeImage(1, 1)">&#10095;</button>
 				    </div>
