@@ -1,0 +1,1 @@
+We celebrated Christmas at the Anji Resort, enjoying hot springs, gourmet food, karaoke, and skiing. A heartfelt thanks to Yuyue, Jiayu Wang, Xueqiao Wang, Junhao Xv, and Xinghan Li for their hard work in securing the activity funds that made this unforgettable experience possible!
