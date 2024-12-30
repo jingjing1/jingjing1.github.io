@@ -364,24 +364,15 @@
 			</div>
 			
 			<script>
-			    // 定义每个图片画廊的图片列表
-			    const imagesBox1 = ["image1.jpg", "image2.jpg", "image3.jpg"]; // 替换为你的图片路径
-			
-			    // 当前索引
+			    const imagesBox1 = ["./files/Christmas2024/3.jpg", "./files/Christmas2024/3.jpg", "./files/Christmas2024/3.jpg"]; 
 			    let currentIndexBox1 = 0;
-			
-			    // 切换图片函数
 			    function changeImage(boxId, direction) {
 			        let images;
 			        let currentIndex;
-			
-			        // 根据 boxId 确定图片列表和当前索引
 			        if (boxId === 1) {
 			            images = imagesBox1;
 			            currentIndex = currentIndexBox1;
 			        }
-			
-			        // 更新索引
 			        currentIndex += direction;
 			
 			        if (currentIndex < 0) {
@@ -389,17 +380,13 @@
 			        } else if (currentIndex >= images.length) {
 			            currentIndex = 0;
 			        }
-			
-			        // 更新图片显示
 			        document.getElementById(`gallery-image-${boxId}`).src = images[currentIndex];
-			
-			        // 保存新的索引
 			        if (boxId === 1) {
 			            currentIndexBox1 = currentIndex;
 			        }
 			    }
 			</script>
-
+			<!-- end box 1 -->
 
 			<!-- box 2-->
 			<div class="projects" style="margin-left: 1em; margin-right: 1em">
