@@ -346,23 +346,39 @@
 		    <div class="projects" style="margin-left: 1em; margin-right: 1em">
 
 			<script>
-			    const imagesBox1 = ["./files/Christmas2024/1.jpg", "./files/Christmas2024/2.jpg", "./files/Christmas2024/3.jpg"]; 
+			    // Image list
+			    const imagesBox1 = [
+			        { src: "./files/Christmas2024/1.jpg", link: "./files/Christmas2024/1.jpg" },
+			        { src: "./files/Christmas2024/2.jpg", link: "./files/Christmas2024/2.jpg" },
+			        { src: "./files/Christmas2024/3.jpg", link: "./files/Christmas2024/3.jpg" }
+			    ];
 			    let currentIndexBox1 = 0;
+			
+			    // Change image function
 			    function changeImage(boxId, direction) {
-			        let images;
-			        let currentIndex;
+			        let images, currentIndex;
+			
+			        // Determine which gallery to modify
 			        if (boxId === 1) {
 			            images = imagesBox1;
 			            currentIndex = currentIndexBox1;
 			        }
+			
+			        // Update the index
 			        currentIndex += direction;
 			
+			        // Loop around if out of bounds
 			        if (currentIndex < 0) {
 			            currentIndex = images.length - 1;
 			        } else if (currentIndex >= images.length) {
 			            currentIndex = 0;
 			        }
-			        document.getElementById(`gallery-image-${boxId}`).src = images[currentIndex];
+			
+			        // Update the image and link
+			        document.getElementById(`gallery-image-${boxId}`).src = images[currentIndex].src;
+			        document.getElementById(`gallery-link-${boxId}`).href = images[currentIndex].link;
+			
+			        // Save the updated index
 			        if (boxId === 1) {
 			            currentIndexBox1 = currentIndex;
 			        }
@@ -373,24 +389,29 @@
 			<div class="projects" style="margin-left: 1em; margin-right: 1em">
 			    <div class="boxed" style="border: 1px solid #DDDDDD; padding: 10px; width: auto; height: auto; overflow: hidden;">
 			
-				<div class="gallery" 
-				    style="position: relative; float: left; margin-left: 10px; margin-right: 10px; border: 1px solid #ccc; width: 320px; height: 260px;">
-				    <button class="prev" 
-					style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 5px; cursor: pointer;" 
-					onclick="changeImage(1, -1)">&#10094;</button>
-					<a id="gallery-image-1" href="./files/Christmas2024/1.jpg">
-					    <img id="gallery-image-1" src="./files/Christmas2024/1.jpg" 
-						 alt="Team Christmas2024" 
-						 style="width: 100%; height: 100%; object-fit: cover;">
-					</a>
-				    <button class="next" 
-					style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 5px; cursor: pointer;" 
-					onclick="changeImage(1, 1)">&#10095;</button>
-				</div>
+			        <!-- Gallery Section -->
+			        <div class="gallery" 
+			            style="position: relative; float: left; margin-left: 10px; margin-right: 10px; border: 1px solid #ccc; width: 320px; height: 260px;">
+			            <button class="prev" 
+			                style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 5px; cursor: pointer; z-index: 1;" 
+			                onclick="changeImage(1, -1)">&#10094;</button>
 			
-				<h5><strong>Merry Christmas 2024!</strong></h5>
-				<p>2024-December</p> <br>
-				<p>We celebrated Christmas at the Anji Resort, enjoying hot springs, gourmet food, karaoke, and skiing. A heartfelt thanks to Yu Yue, Jiayu Wang, Xueqiao Wang, Junhao Xu, and Xinghan Li for their hard work in securing the activity funds that made this unforgettable experience possible!</p>
+			            <!-- Image with link -->
+			            <a id="gallery-link-1" href="./files/Christmas2024/1.jpg">
+			                <img id="gallery-image-1" src="./files/Christmas2024/1.jpg" 
+			                     alt="Team Christmas2024" 
+			                     style="width: 100%; height: 100%; object-fit: cover;">
+			            </a>
+			
+			            <button class="next" 
+			                style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 5px; cursor: pointer; z-index: 1;" 
+			                onclick="changeImage(1, 1)">&#10095;</button>
+			        </div>
+			
+			        <!-- Text Section -->
+			        <h5><strong>Merry Christmas 2024!</strong></h5>
+			        <p>2024-December</p> <br>
+			        <p>We celebrated Christmas at the Anji Resort, enjoying hot springs, gourmet food, karaoke, and skiing. A heartfelt thanks to Yu Yue, Jiayu Wang, Xueqiao Wang, Junhao Xu, and Xinghan Li for their hard work in securing the activity funds that made this unforgettable experience possible!</p>
 			    </div>
 			</div>
 			<!-- end box 1 -->
