@@ -353,6 +353,48 @@
 		    <h5 class="text-primary" id="team_time">Team Time</h5> 
 		    <div class="projects" style="margin-left: 1em; margin-right: 1em">
 
+
+			<script>
+			    // Image list
+			    const imagesBox1 = [
+			        { src: "./files/2025may/p1.jpg", link: "./files/2025may/p1.jpg" },
+			        { src: "./files/2025may/p2.jpg", link: "./files/2025may/p2.jpg" },
+			        { src: "./files/2025may/p3.jpg", link: "./files/2025may/p3.jpg" },
+				{ src: "./files/2025may/p4.jpg", link: "./files/2025may/p4.jpg" }
+			    ];
+			    let currentIndexBox1 = 0;
+			
+			    // Change image function
+			    function changeImage(boxId, direction) {
+			        let images, currentIndex;
+			
+			        // Determine which gallery to modify
+			        if (boxId === 1) {
+			            images = imagesBox1;
+			            currentIndex = currentIndexBox1;
+			        }
+			
+			        // Update the index
+			        currentIndex += direction;
+			
+			        // Loop around if out of bounds
+			        if (currentIndex < 0) {
+			            currentIndex = images.length - 1;
+			        } else if (currentIndex >= images.length) {
+			            currentIndex = 0;
+			        }
+			
+			        // Update the image and link
+			        document.getElementById(`gallery-image-${boxId}`).src = images[currentIndex].src;
+			        document.getElementById(`gallery-link-${boxId}`).href = images[currentIndex].link;
+			
+			        // Save the updated index
+			        if (boxId === 1) {
+			            currentIndexBox1 = currentIndex;
+			        }
+			    }
+			</script>
+			    
 			<script>
 			    // Image list
 			    const imagesBox1 = [
