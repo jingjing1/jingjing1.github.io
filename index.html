@@ -378,6 +378,17 @@
 				{ src: "./files/2025may/p4.jpg", link: "./files/2025may/p4.jpg" }
 			    ];
 			    let currentIndexBox2 = 0;
+
+
+				// 2025 Christmas
+			    const imagesBox3 = [
+			        { src: "./files/files2025Christmas/p1.jpg", link: "./files/files2025Christmas/p1.jpg" },
+			        { src: "./files/files2025Christmas/p2.jpg", link: "./files/files2025Christmas/p2.jpg" },
+			        { src: "./files/files2025Christmas/p3.jpg", link: "./files/files2025Christmas/p3.jpg" },
+					{ src: "./files/files2025Christmas/p4.jpg", link: "./files/files2025Christmas/p4.jpg" },
+				{ src: "./files/files2025Christmas/p1.jpg", link: "./files/files2025Christmas/p1.jpg" }
+			    ];
+			    let currentIndexBox3 = 0;
 			
 			    // Change image function
 			    function changeImage(boxId, direction) {
@@ -388,9 +399,13 @@
 			            images = imagesBox1;
 			            currentIndex = currentIndexBox1;
 			        }
-				if (boxId === 2) {
+					if (boxId === 2) {
 			            images = imagesBox2;
 			            currentIndex = currentIndexBox2;
+			        }
+					if (boxId === 3) {
+			            images = imagesBox3;
+			            currentIndex = currentIndexBox3;
 			        }
 			
 			        // Update the index
@@ -411,11 +426,49 @@
 			        if (boxId === 1) {
 			            currentIndexBox1 = currentIndex;
 			        }
-				if (boxId === 2) {
+					if (boxId === 2) {
 			            currentIndexBox2 = currentIndex;
+			        }
+					if (boxId === 3) {
+			            currentIndexBox3 = currentIndex;
 			        }
 			    }
 			</script>
+				
+
+			<!-- box -2 -->
+			<div class="projects" style="margin-left: 1em; margin-right: 1em">
+			    <div class="boxed" style="border: 1px solid #DDDDDD; padding: 10px; width: auto; height: auto; overflow: hidden;">
+			
+			        <!-- Gallery Section -->
+			        <div class="gallery" 
+			            style="position: relative; float: right; margin-left: 10px; margin-right: 10px; border: 1px solid #ccc; width: 320px; height: 260px;">
+			            <button class="prev" 
+			                style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 5px; cursor: pointer; z-index: 1;" 
+			                onclick="changeImage(1, -1)">&#10094;</button>
+			
+			            <!-- Image with link -->
+			            <a id="gallery-link-1" href="./files/files2025Christmas/p1.jpg">
+			                <img id="gallery-image-1" src="./files/files2025Christmas/p1.jpg" 
+			                     alt="Christmas2025" 
+			                     style="width: 100%; height: 100%; object-fit: cover;">
+			            </a>
+			
+			            <button class="next" 
+			                style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 5px; cursor: pointer; z-index: 1;" 
+			                onclick="changeImage(3, 1)">&#10095;</button>   <!-- changeImage(boxId, +1) -->
+			        </div>
+			
+			        <!-- Text Section -->
+			        <h5><strong>Merry Christmas 2025!</strong></h5>
+			        <p>2025-Dec</p> <br>
+			        <p>We are celebrating Christmas in Hainan this year. It’s an island famous for its beaches, Wenchang chicken, and seafood.</p>
+					
+			    </div>
+			</div>
+			<!-- end box -2 -->
+
+				
 
 			<!-- box -1 -->
 			<div class="projects" style="margin-left: 1em; margin-right: 1em">
@@ -509,7 +562,7 @@
 			<!-- end box 1 -->
 
 			<!-- box 2-->
-			<div class="projects" style="margin-left: 1em; margin-right: 1em">
+			<!-- <div class="projects" style="margin-left: 1em; margin-right: 1em">
 		        <div class="boxed" style="border: 1px solid #DDDDDD; padding: 10px; width: auto; height: auto; overflow: hidden;">
 		            <p>
 		                <a href="./files/team_2024_freshman.jpg">
@@ -524,8 +577,7 @@
 		            <p>2024-9-1</p> <br>
 		            <p>This year, we welcome new team members: Jiarui Yang, Chao Gong, Yian Li, Xinghan Li, Xueqiao Wang, Jianrong Yan, Tianxiao Xu, Shijie Zhou, and Xiaoyu Chen.</p>
 		        </div>
-			</div>
-		        <!-- end boxed-->
+			</div> -->
 
 
 			<!-- box 3-->
